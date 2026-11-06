@@ -1,0 +1,49 @@
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:#14081f;color:#fff;font:15px/1.5 Manrope,system-ui,sans-serif}
+#app,#app canvas{position:fixed;inset:0;display:block}
+.glass{background:rgba(32,10,44,.58);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,170,200,.22);border-radius:18px}
+#joy{position:fixed;left:8px;bottom:84px;width:150px;height:150px;z-index:5}
+#hud{position:fixed;top:max(10px,env(safe-area-inset-top));left:10px;right:10px;display:flex;gap:8px;align-items:center;padding:8px 12px;z-index:6}
+#hname{flex:1;font:italic 600 24px 'Cormorant Garamond',Georgia,serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+button,.btn{font:inherit;color:#fff;background:rgba(255,255,255,.09);border:1px solid rgba(255,170,200,.3);border-radius:12px;padding:8px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+button:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #ffb3cb;outline-offset:2px}
+.btn.pri{background:linear-gradient(135deg,#ff5c8a,#ff9a5c);border:0;font-weight:600;color:#2a0a1f}
+#nav{position:fixed;bottom:max(10px,env(safe-area-inset-bottom));left:10px;right:10px;display:flex;justify-content:space-around;padding:4px;z-index:6}
+#nav button{background:none;border:0;font-size:22px;padding:8px 12px}
+#sheet{position:fixed;inset:0;z-index:20;display:none;align-items:flex-end;justify-content:center;background:rgba(10,3,20,.5)}
+#sheet.on{display:flex}
+.box{width:min(560px,100%);max-height:84vh;overflow:auto;padding:16px;border-radius:22px 22px 0 0;display:flex;flex-direction:column;gap:10px}
+.box header{display:flex;justify-content:space-between;align-items:center}
+h2{font:italic 600 28px 'Cormorant Garamond',Georgia,serif}
+h3{font:600 15px Manrope;color:#ffb3cb;margin-top:8px}
+.body{display:flex;flex-direction:column;gap:10px}
+input,textarea,select{width:100%;font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,170,200,.3);border-radius:12px;padding:10px}
+textarea{min-height:84px;resize:vertical}
+.card{background:rgba(255,255,255,.06);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.card a{color:#ffd0e0}.card button{align-self:flex-start}
+.item{display:flex;justify-content:space-between;text-align:left;width:100%}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.pic{max-width:100%;max-height:50vh;border-radius:12px;align-self:center}
+.qr{width:200px;border-radius:12px;align-self:center}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:rgba(255,255,255,.07);border-radius:14px;padding:10px;text-align:center}
+.stat b{display:block;font-size:24px}.stat span,.mute,small{opacity:.7;font-size:13px}
+#toast{position:fixed;left:50%;top:80px;transform:translate(-50%,-20px);background:#ffd0e0;color:#2a0a1f;padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:40}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+#welcome{position:fixed;inset:0;z-index:30;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 35%,#5a1840,#14081f 70%);transition:opacity .8s}
+#welcome.off{opacity:0;pointer-events:none}
+#welcome h1{font:italic 600 clamp(44px,12vw,84px)/1 'Cormorant Garamond',Georgia,serif;margin-bottom:14px;text-shadow:0 0 30px #ff5c8a}
+#welcome p{max-width:34ch;margin:0 auto 22px;opacity:.85}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+#nav button{padding:8px 7px}
+#bell{position:relative}#bell[data-n]:not([data-n=""])::after{content:attr(data-n);position:absolute;top:0;right:0;background:#ff5c8a;color:#2a0a1f;font:700 11px Manrope;border-radius:9px;min-width:17px;padding:1px 4px}
+#player{position:fixed;right:10px;bottom:76px;z-index:7;padding:6px;width:236px}
+#player iframe{width:100%;height:124px;border:0;border-radius:10px;display:block}
+#player button{position:absolute;top:-10px;right:-6px;padding:2px 8px;border-radius:12px}
+.badge{opacity:.38}.badge.on{opacity:1;border:1px solid #ffb3cb}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+label{display:flex;flex-direction:column;gap:6px}
+#rooms{position:fixed;top:calc(max(10px,env(safe-area-inset-top)) + 58px);left:10px;right:10px;display:flex;gap:6px;overflow-x:auto;z-index:6;scrollbar-width:none}
+#rooms button{background:rgba(32,10,44,.58);white-space:nowrap;backdrop-filter:blur(14px);padding:6px 12px;border-radius:14px}
+#rooms button.on{background:linear-gradient(135deg,#ff5c8a,#ff9a5c);color:#2a0a1f;font-weight:600;border:0}
+.chk{flex-direction:row;align-items:center;gap:8px}.chk input{width:auto}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Xotiralar uyi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+</head><body>
+<div id="app"></div><div id="joy"></div>
+<div id="hud" class="glass"><b id="hname"></b><button id="hlike" aria-label="Layk"></button><button id="hsong" aria-label="Musiqa" hidden>🎶</button><button id="hbook" aria-label="Mehmonlar kitobi">📖</button><button id="hshare" aria-label="Ulashish">🔗</button></div>
+<div id="rooms"></div>
+<nav id="nav" class="glass">
+<button data-v="home" aria-label="Asosiy uy">🏠</button><button data-v="houses" aria-label="Uylar">🌍</button><button data-v="wishes" aria-label="Tilaklar">💌</button><button data-v="news" aria-label="Yangiliklar">📰</button><button data-v="songs" aria-label="Qo'shiqlar">🎵</button><button id="bell" data-v="bell" aria-label="Bildirishnoma">🔔</button><button data-v="me" aria-label="Men">👤</button>
+</nav>
+<section id="sheet"><div class="box glass"><header><h2></h2><button id="x" aria-label="Yopish">✕</button></header><div class="body"></div></div></section>
+<div id="player" class="glass" hidden></div><div id="toast"></div>
+<div id="welcome"><div><h1>Xotiralar uyi</h1><p>Ichkariga kiring, o‘z uyingizni yarating va eng aziz rasmlaringizni stendlarga joylang.</p><button id="go" class="btn pri">Uyga kirish</button></div></div>
+<script type="module" src="/src/main.js"></script>
+</body></html>
