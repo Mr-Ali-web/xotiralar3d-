@@ -4,7 +4,7 @@ import {createWorld} from './scene.js';
 import {$,esc,toast,sheet,closeSheet,shrink,shareSheet} from './ui.js';
 
 let cur=null,ri=0;const seen=new Set();
-const arun=async(f,then)=>{try{await f();then?.()}catch(e){toast(e.message)}};
+const arun=async(f,then)=>{try{const value=await f();then?.(value)}catch(e){toast(e.message)}};
 const isAdmin=()=>api.me()?.role==='admin';
 const canEdit=h=>{const u=api.me();return !!u&&!u.banned&&(u.role==='admin'||h.owner===u.id)};
 const world=createWorld($('#app'),$('#joy'),i=>pick(i),r=>open(cur.id,r));
