@@ -20,3 +20,4 @@ npm install && npm run dev
 ## Deploy
 - Frontend on HTTPS (Netlify) requires backend over HTTPS too.
 - Set ALLOWED_ORIGINS to your deployed frontend origin.
+# xotiralar3d-
